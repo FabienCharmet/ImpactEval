@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Éditeur de Spyder
-
-Ceci est un script temporaire.
 """
 
 import networkx as nx
@@ -217,7 +215,8 @@ def compute_impact_proba(ntimes):
         proba_array[i]=1.0
     print(proba_array)
 
-def verbose_compute_impact_proba(ntimes):
+def verbose_compute_impact_proba():
+    ntimes=1
     counter_array=[0]*G.number_of_nodes()
     # np.random.seed(42)
     print("Evaluating each random variable\n")
@@ -535,7 +534,7 @@ sampling = [10**x for x in range(3,4)]
 # sampling = [1]
 for i in sampling:
     compute_impact_proba(i)
-#verbose_compute_impact_proba(1)
+verbose_compute_impact_proba()
 verbose_inclusion_exclusion()
 #inclusion_exclusion()
 
